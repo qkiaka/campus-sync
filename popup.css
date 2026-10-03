@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; width: 300px; padding: 16px;
+  background: #fffdf9; color: #3b2f26;
+  font: 14px/1.7 "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+}
+h1 { margin: 0 0 12px; font-size: 16px; }
+.status { margin: 0 0 4px; font-weight: 700; font-size: 15px; }
+.sub { margin: 0 0 14px; color: #6f6054; font-size: 13px; }
+label.toggle { display: flex; align-items: center; gap: 8px; margin: 0 0 14px; cursor: pointer; }
+input[type="checkbox"] { width: 18px; height: 18px; accent-color: #8f6038; }
+a.btn {
+  display: block; text-align: center; padding: 10px 14px; border-radius: 10px;
+  background: #8f6038; color: #fff; text-decoration: none; font-weight: 700;
+}
+a.btn:hover { background: #74492a; }
+a:focus-visible, input:focus-visible { outline: 3px solid #5b8bb5; outline-offset: 2px; }
+.note { margin: 12px 0 0; font-size: 12px; color: #7a6a5c; }

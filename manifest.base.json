@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "きづきタイム for YouTube",
+  "description": "YouTubeを止めさせず、「今なぜ見ているか」に一定間隔で気づくための拡張機能です。",
+  "version": "0.1.0",
+  "minimum_chrome_version": "110",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "きづきタイム",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
